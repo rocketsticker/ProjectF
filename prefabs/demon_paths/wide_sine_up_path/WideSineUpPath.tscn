@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://v1hwijbt5auy"]
+
+[ext_resource type="Script" path="res://prefabs/demon_paths/wide_sine_up_path/WideSineUpPath.gd" id="1_efpmh"]
+
+[sub_resource type="Curve2D" id="Curve2D_0td30"]
+_data = {
+"points": PackedVector2Array(191.814, 0, -191.814, 0, 1344, 0, 192.423, 0.608933, -192.423, -0.608933, 960, -384, 192.423, 0, -192.423, 0, 576, 0, 193.641, 0.608933, -193.641, -0.608933, 192, -384, 193.032, -0.608933, -193.032, 0.608933, -192, 0)
+}
+point_count = 5
+
+[node name="WideSineUpPath" type="Path2D"]
+curve = SubResource("Curve2D_0td30")
+script = ExtResource("1_efpmh")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(1344, 0)
+rotation = 3.14159

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnhnj4wyox35k"]
+
+[ext_resource type="Texture2D" uid="uid://bq1d2cvyqfshr" path="res://prefabs/demons/demon/assets/demon-0.png" id="1_2063p"]
+[ext_resource type="Script" path="res://prefabs/demons/demon/Demon.gd" id="1_h3eyb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0spls"]
+radius = 33.0151
+
+[node name="Demon" type="StaticBody2D" groups=["demons"]]
+collision_mask = 0
+script = ExtResource("1_h3eyb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2063p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0spls")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr0futbvr11ge"]
+
+[ext_resource type="Script" path="res://prefabs/demon_paths/straight_path/StraightPath.gd" id="1_mudl7"]
+
+[sub_resource type="Curve2D" id="Curve2D_xpk02"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1344, 0, 0, 0, 0, 0, -64, 0)
+}
+point_count = 2
+
+[node name="SlowStraightPath" type="Path2D"]
+curve = SubResource("Curve2D_xpk02")
+script = ExtResource("1_mudl7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(1344, 0)
+rotation = 3.14159
