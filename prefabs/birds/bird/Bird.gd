@@ -5,7 +5,7 @@ extends Area2D
 
 
 const ABOVE_OFFSET = 64
-const BELOW_OFFSET = 128
+const BELOW_OFFSET = 64
 const LEFT_OFFSET = 128
 
 

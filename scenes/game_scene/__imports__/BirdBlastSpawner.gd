@@ -1,7 +1,7 @@
 extends Node
 
 
-@export var delay_sec = 1
+@export var delay_sec = .5
 
 
 const STRAIGHT_PATH = "res://prefabs/bird_blast_paths/straight_path/StraightPath.tscn"

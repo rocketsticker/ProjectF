@@ -6,7 +6,6 @@ func _ready():
 	var duration = 4
 	
 	await spawn_many(STRAIGHT_PATH, 10, delay_sec, 1, 10, duration)
-	await wait_for(duration)
 	await spawn_many(STRAIGHT_PATH, 10, delay_sec, 10, 1, duration)
 
 	is_spawning = false

@@ -23,28 +23,36 @@ func _process(delta):
 	check_progress()
 
 
+func spawn_one(
+	prefab: String,
+	slot: int = 1,
+	duration: float = 8
+):
+	var obj = load(prefab).instantiate()
+	obj.slot = slot
+	obj.tween_duration = duration
+	obj.connect("completed", _on_path_completed)
+	add_child(obj)
+	
+	increase_number_of_paths()
+
+
 func spawn_many(
 	prefab: String, 
 	times: int = 2, 
 	delay_sec: float = 1,
 	from_slot: int = 1,
 	to_slot: int = 8,
-	duration: int = 8,
+	duration: float = 8,
 ):
 	var current_slot = from_slot
 	for n in times:
-		var obj = load(prefab).instantiate()
-		obj.slot = current_slot
-		obj.tween_duration = duration
-		obj.connect("completed", _on_path_completed)
-		add_child(obj)
+		spawn_one(prefab, current_slot, duration)
 		
 		if from_slot < to_slot:
 			current_slot = clamp(current_slot + 1, from_slot, to_slot)
 		else:
 			current_slot = clamp(current_slot - 1, to_slot, from_slot)
-			
-		increase_number_of_paths()
 			
 		await wait_for(delay_sec)
 

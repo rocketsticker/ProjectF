@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy28w7cfwvq7k"]
+
+[ext_resource type="Script" path="res://prefabs/demon_waves/easy_2nd_wave/Easy2ndWave.gd" id="1_liul2"]
+
+[node name="Easy2ndWave" type="Node"]
+script = ExtResource("1_liul2")

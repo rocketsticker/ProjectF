@@ -1,6 +1,9 @@
 extends Node
 
 
+var current_wave = 0
+
+
 func _ready():
 	spawn_wave()
 
@@ -11,11 +14,15 @@ func _process(delta):
 
 func spawn_wave():
 	var available_wave_prefabs = [
-		"res://prefabs/demon_waves/easy_one_wave/EasyOneWave.tscn",
+		"res://prefabs/demon_waves/easy_1st_wave/Easy1stWave.tscn",
+		"res://prefabs/demon_waves/easy_2nd_wave/Easy2ndWave.tscn",
+		"res://prefabs/demon_waves/easy_3nd_wave/Easy3ndWave.tscn"
 	]
 	
-	var random_wave_prefab = available_wave_prefabs.pick_random()
-	var random_wave = load(random_wave_prefab).instantiate()
-	random_wave.connect("completed", spawn_wave)
+	var next_wave_prefab = available_wave_prefabs[current_wave % available_wave_prefabs.size()]
+	var next_wave = load(next_wave_prefab).instantiate()
+	next_wave.connect("completed", spawn_wave)
 	
-	add_child(random_wave)
+	add_child(next_wave)
+	
+	current_wave += 1
