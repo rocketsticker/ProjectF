@@ -1,11 +1,12 @@
 extends Area2D
 
 
-@export var SPEED = 10
+@export var speed = 10
 
 
 const ABOVE_OFFSET = 64
 const BELOW_OFFSET = 128
+const LEFT_OFFSET = 128
 
 
 var screen_size: Vector2
@@ -23,8 +24,8 @@ func _process(delta):
 
 func move_to_mouse_point(delta: float):
 	var dest: Vector2 = get_viewport().get_mouse_position()
-	dest.x = position.x
+	dest.x = LEFT_OFFSET
 	dest.y = clamp(dest.y, ABOVE_OFFSET, screen_size.y - BELOW_OFFSET)
 	
 	var vect: Vector2 = dest - position
-	position = position + (vect * delta * SPEED)
+	position = position + (vect * delta * speed)

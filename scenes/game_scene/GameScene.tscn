@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxubkknwhpd0k"]
+
+[ext_resource type="PackedScene" uid="uid://c386nrkfh08tc" path="res://prefabs/birds/bird/Bird.tscn" id="1_5ss3x"]
+[ext_resource type="Script" path="res://scenes/game_scene/GameScene.gd" id="1_qqdhi"]
+
+[node name="GameScene" type="Node"]
+script = ExtResource("1_qqdhi")
+
+[node name="Bird" parent="." instance=ExtResource("1_5ss3x")]
+
+[node name="DemonSpawningTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="DemonSpawningTimer" to="." method="_on_demon_spawning_timer_timeout"]
