@@ -7,7 +7,8 @@
 radius = 33.0151
 
 [node name="Demon" type="StaticBody2D" groups=["demons"]]
-collision_mask = 0
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_h3eyb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

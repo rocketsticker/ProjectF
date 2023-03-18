@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwdwdntjnaoht"]
+
+[ext_resource type="Script" path="res://scenes/game_scene/__imports__/BirdBlastSpawner.gd" id="1_4lm8c"]
+
+[node name="BirdBlastSpawner" type="Node"]
+script = ExtResource("1_4lm8c")

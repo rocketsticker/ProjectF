@@ -29,3 +29,8 @@ func move_to_mouse_point(delta: float):
 	
 	var vect: Vector2 = dest - position
 	position = position + (vect * delta * speed)
+
+
+func _on_body_entered(body):
+	if body.is_in_group("demons"):
+		Engine.time_scale = 0

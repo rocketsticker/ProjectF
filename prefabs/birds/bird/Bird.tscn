@@ -8,7 +8,8 @@ load_path = "res://.godot/imported/bird-0.png-eacb53bdd12552d146756e9322a8d064.c
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5m0bt"]
 size = Vector2(64, 64)
 
-[node name="Bird" type="Area2D"]
+[node name="Bird" type="Area2D" groups=["birds"]]
+collision_mask = 2
 script = ExtResource("1_yonec")
 metadata/_edit_group_ = true
 
@@ -18,3 +19,5 @@ texture = SubResource("CompressedTexture2D_ldqcv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5m0bt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
