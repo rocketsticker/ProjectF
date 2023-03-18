@@ -45,7 +45,7 @@ func start_progress():
 
 func check_progress():
 	if $PathFollow2D.progress_ratio == 1:
-		print_debug("%s is completed" % get_instance_id())
+		print_debug("DemonPath2D: %s is completed" % get_instance_id())
 		
 		completed.emit()
 		queue_free()

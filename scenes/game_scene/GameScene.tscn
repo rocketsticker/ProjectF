@@ -7,9 +7,3 @@
 script = ExtResource("1_qqdhi")
 
 [node name="Bird" parent="." instance=ExtResource("1_5ss3x")]
-
-[node name="DemonSpawningTimer" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
-
-[connection signal="timeout" from="DemonSpawningTimer" to="." method="_on_demon_spawning_timer_timeout"]

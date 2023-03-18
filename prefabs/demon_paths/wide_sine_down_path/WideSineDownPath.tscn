@@ -4,9 +4,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_6w78m"]
 _data = {
-"points": PackedVector2Array(191.291, 0, 0, 0, 1344, 0, 0, 0, 0, 0, 1288, 80, 194.07, 0, -194.07, 0, 896, 384, 191.291, 0.463175, -191.291, -0.463175, 512, 0, 191.754, -0.463175, -191.754, 0.463175, 128, 384, 192.218, 0, -192.218, 0, -256, 0)
+"points": PackedVector2Array(191.393, 0, -191.393, 0, 1344, 0, 194.07, 0, -194.07, 0, 960, 384, 191.291, 0.463175, -191.291, -0.463175, 576, 0, 191.754, -0.463175, -191.754, 0.463175, 192, 384, 192.218, 0, -192.218, 0, -192, 0)
 }
-point_count = 6
+point_count = 5
 
 [node name="WideSineDownPath" type="Path2D"]
 curve = SubResource("Curve2D_6w78m")
@@ -14,4 +14,4 @@ script = ExtResource("1_nvurx")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 position = Vector2(1344, 0)
-rotation = 2.18152
+rotation = 3.14159
