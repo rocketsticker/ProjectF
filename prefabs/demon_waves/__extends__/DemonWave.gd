@@ -4,12 +4,15 @@ extends Node
 signal completed
 
 
-@export var number_of_objects = 0
+@export var delay_sec = 1
+@export var duration = 8
 
 
 const STRAIGHT_PATH = "res://prefabs/demon_paths/straight_path/StraightPath.tscn"
 const WIDE_SINE_DOWN_PATH = "res://prefabs/demon_paths/wide_sine_down_path/WideSineDownPath.tscn"
 const WIDE_SINE_UP_PATH = "res://prefabs/demon_paths/wide_sine_up_path/WideSineUpPath.tscn"
+const NARROW_SINE_DOWN_PATH = "res://prefabs/demon_paths/narrow_sine_down_path/NarrowSineDownPath.tscn"
+const NARROW_SINE_UP_PATH = "res://prefabs/demon_paths/narrow_sine_up_path/NarrowSineUpPath.tscn"
 
 
 var is_spawning: bool = true

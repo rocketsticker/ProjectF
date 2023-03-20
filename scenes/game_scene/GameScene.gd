@@ -1,7 +1,7 @@
 extends Node
 
 
-var current_wave = 4
+var current_wave = 0
 
 
 func _ready():
@@ -18,7 +18,9 @@ func spawn_wave():
 		"res://prefabs/demon_waves/easy_2nd_wave/Easy2ndWave.tscn",
 		"res://prefabs/demon_waves/easy_3nd_wave/Easy3ndWave.tscn",
 		"res://prefabs/demon_waves/easy_4th_wave/Easy4thWave.tscn",
-		"res://prefabs/demon_waves/medium_1st_wave/Medium1stWave.tscn"
+		"res://prefabs/demon_waves/easy_5th_wave/Easy5thWave.tscn",
+		"res://prefabs/demon_waves/medium_1st_wave/Medium1stWave.tscn",
+		"res://prefabs/demon_waves/medium_2nd_wave/Medium2ndWave.tscn"
 	]
 	
 	var next_wave_prefab = available_wave_prefabs[current_wave % available_wave_prefabs.size()]

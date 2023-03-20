@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw5np5evpibdt"]
+
+[ext_resource type="Script" path="res://prefabs/demon_paths/narrow_sine_up_path/NarrowSineUpPath.gd" id="1_7fyc2"]
+
+[sub_resource type="Curve2D" id="Curve2D_wm3r2"]
+_data = {
+"points": PackedVector2Array(95.734, 0.187714, -95.734, -0.187714, 1344, 128, 95.1709, 0.187714, -95.1709, -0.187714, 1152, 0, 96.1094, -0.375427, -96.1094, 0.375427, 960, 128, 96.1094, 0.187714, -96.1094, -0.187714, 768, 0, 96.2971, 0, -96.2971, 0, 576, 128, 95.734, 0, -95.734, 0, 384, 0, 95.9217, 0.187714, -95.9217, -0.187714, 192, 128, 95.9217, -0.187714, -95.9217, 0.187714, 0, 0, 95.9217, 0, -95.9217, 0, -192, 128)
+}
+point_count = 9
+
+[node name="NarrowSineUpPath" type="Path2D"]
+curve = SubResource("Curve2D_wm3r2")
+script = ExtResource("1_7fyc2")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(1344, 128)
+rotation = -3.13963

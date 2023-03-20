@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ngb41rmm58m3"]
+
+[ext_resource type="Script" path="res://prefabs/demon_waves/medium_2nd_wave/Medium2ndWave.gd" id="1_iktu4"]
+
+[node name="Medium2ndWave" type="Node"]
+script = ExtResource("1_iktu4")
