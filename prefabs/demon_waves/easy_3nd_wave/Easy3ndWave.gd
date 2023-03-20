@@ -2,8 +2,8 @@ extends "res://prefabs/demon_waves/__extends__/DemonWave.gd"
 
 
 func _ready():
-	var delay_sec = .5
-	var duration = 4
+	var delay_sec = 1
+	var duration = 8
 	
 	for n in 2:
 		spawn_one(STRAIGHT_PATH, 1, duration)
